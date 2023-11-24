@@ -1,0 +1,58 @@
+<div class="trang">
+<div class="image">
+  <div>
+      <img class="center" src ="../assets/hinh/nen1.jpg">
+  </div>
+  <div class="overlay-text">
+    SẢN PHẨM
+  </div>
+</div>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/trangchu">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Sản phẩm</li>
+  </ol>
+</nav>
+<div class="grid">
+    <div><div> 
+       <p class="p">LOẠI SẢN PHẨM</p>
+       <div class="toolbar">
+         <button type="button" class="btn btn-outline-secondary" style="width: 250px;"> 
+          <div class="toolbar-item" [class.selected]="selectedCategory === category" *ngFor="let category of categories" (click)="selectCategory(category)">
+             {{ category }}
+           </div></button>
+         </div>
+         <div>
+           <p class="p">CHỌN GIỚI TÍNH</p>
+           <div class="toolbar">
+             <button type="button" class="btn btn-outline-secondary" style="width: 250px;">
+             <div class="toolbar-item" [class.selected]="selectedCate === cate" *ngFor="let cate of cates" (click)="selectCate(cate)">
+               {{ cate }}
+             </div></button>
+           </div>
+         </div>
+     </div></div>
+<div class="product-grid">
+  <div class="product" *ngFor="let product of visibleAndFilteredProducts">
+          <img [src]="product.imageUrl" alt="{{ product.name }}">
+          <h5>{{ product.name }}</h5>
+          <div>
+            <p>
+              <span 
+                class="original-price" 
+                *ngIf="product.discountPercent > 0" 
+                [ngStyle]="{ 'text-decoration': product.discountPercent > 0 ? 'line-through' : 'none' }"
+              >
+                {{ product.price | currency }}
+              </span>
+              {{ calculateDiscountedPrice(product) | currency }}
+            </p>
+            <p *ngIf="product.discountPercent">Sale: {{ product.discountPercent }}%</p>
+          </div>
+</div>
+</div>
+</div>
+<div class="qua">
+  <button *ngFor="let page of pages" (click)="goToPage(page)" role="button" aria-controls="offcanvasExample">{{ page }}</button>
+</div>
+</div>

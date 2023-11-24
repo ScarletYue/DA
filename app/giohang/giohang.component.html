@@ -1,0 +1,53 @@
+
+<nav style="--bs-breadcrumb-divider: '>'; margin-top: 5%; margin-bottom: -2%; text-decoration: none;" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/trangchu">Trang chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+    </ol>
+  </nav>
+
+<div class="container mt-4">
+<h1 class="text-center">Giỏ hàng</h1>
+<div class="row">
+    <div class="col col-md-12">
+        <table class="table table-bordered" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="datarow">
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="../assets/img/product/ipad4.png" class="hinhdaidien">
+                    </td>
+                    <td>Tên</td>
+                    <input class="" type="number" id="quantity" [(ngModel)]="quantity" [min]="min" [max]="max">       
+                    <td class="text-right">đơn giá</td>          
+                    <td class="text-right">tổng</td>
+                    <td>
+                        <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                            <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                        </a>
+                    </td>
+                </tr>
+                        
+            </tbody>
+        </table>
+        <div class="tong">
+        <td>Tổng thành tiền:</td></div>
+        <div class="nut">
+        <a routerLink="/trangchu" class="btn btn-warning btn-md">Quay về trang chủ</a>
+        <a routerLink="" class="btn btn-primary btn-md" style="margin-left: 10px;">Thanh toán</a>
+        </div>
+        
+</div>
+</div>
+</div>

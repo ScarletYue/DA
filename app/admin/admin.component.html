@@ -1,0 +1,52 @@
+<div class="large-view">
+    <form class="row g-3">
+    <div class="small-view" [ngStyle]="{'width.%': smallViewWidth, 'right.px': smallViewRight}">
+        <button type="button" class="btn-close" aria-label="Close" style="margin-left: 90%;"></button>
+        <div class="admin">
+        <p style="font-size: 20px; font-weight: bolder;"> Trang quản lý </p>
+        <hr class="custom-line">
+        <div class="col-12">
+            <label for="inputadmin" class="form-label">Tên sản phẩm</label>
+            <input type="admin" class="form-control" id="inputadmin" placeholder="tên sản phẩm" style="width: 100%;">
+        <br>
+        <label for="inputadmin" class="form-label">Mã sản phẩm</label>
+            <input type="admin" class="form-control" id="inputadmin" placeholder="mã sản phẩm" style="width: 100%;">
+        <br>
+            <label for="inputadmin" class="form-label">Giá sản phẩm</label>
+            <input type="admin" class="form-control" id="inputadmin" placeholder="giá sản phẩm" style="width: 100%;">
+        <br>
+        <label for="inputadmin" class="form-label">Sale ( nếu có )</label>
+            <input type="admin" class="form-control" id="inputadmin" placeholder=" sale" style="width: 100%;">
+        <br>
+            <label for="inputadmin" class="form-label">Giới tính</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Giới tính</option>
+                <option value="1">Nam</option>
+                <option value="2">Nữ</option>
+              </select>
+        <br>
+        <label for="inputadmin" class="form-label">Ngày đăng sản phẩm</label> <br>
+        <input type="date"  min="2000-01-01" max="2100-12-31" class="form-control" style="width: 100%;" required />
+        <br>
+        <button type="submit" class="btn btn-primary bt" data-bs-toggle="modal" data-bs-target="#exampleModal" >Đăng</button>
+        </div> 
+        </div>
+    </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>CHÚC MỪNG BẠN ĐÃ ĐĂNG SẢN PHẨM THÀNH CÔNG</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>

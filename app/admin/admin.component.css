@@ -1,0 +1,34 @@
+/* component.css */
+.large-view {
+    position: relative;
+    width: 100%; /* hoặc kích thước mong muốn */
+    height: 100vh; /* hoặc kích thước mong muốn */
+    background-color: #f0f0f0; /* màu nền của view lớn */
+  }
+  
+  .small-view {
+    position: absolute;
+    top: 0;
+    right: 0; /* Căn chỉnh về bên phải */
+    width: 30%; /* hoặc kích thước mong muốn */
+    height: 100%; /* hoặc kích thước mong muốn */
+    background-color: #ffffff; /* màu nền của view nhỏ */
+    opacity: 0.8; /* Độ mờ */
+  }
+  .custom-line {
+    border: 1px solid #000; 
+    margin:  center; 
+    max-width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+.admin {
+    margin: 2%;
+    font-size: 17spx;
+}
+.btn {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    font-weight: bolder;
+}

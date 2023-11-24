@@ -1,0 +1,17 @@
+<div [ngClass]="{'thanhben': true, 'thanhben--fold': isFolded}">
+    <div> <p class="sp">Sản Phẩm</p>
+ <ul class="thanhben__list">
+    <li class="thanhben__item">
+      <a [class.selected]="selectedCategory === category"
+      *ngFor="let category of categories"
+      (click)="selectCategory2(category)">
+      {{ category }}
+    </a>
+    </li> 
+    </ul>
+    
+    </div>
+   
+      <button (click)="toggleFold()" class="thanhben__btn"></button>
+  </div>
+  

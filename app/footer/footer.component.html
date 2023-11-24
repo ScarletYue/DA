@@ -1,0 +1,35 @@
+<footer>
+    <div class="container">
+        <div>
+            <div class="footer" *ngFor="let footer of footer">
+            <img class="logo" src ="../assets/hinh/1310558.jpg">
+            <p>{{ footer.diachi }}</p>
+            <p>{{ footer.email }}</p>
+            <p>{{ footer.Sdt }}</p>
+            <div class="link" style="width: 20%; ">
+            <a href=""><img src ="../assets/hinh/Face.png" style="width: 100%;"></a>
+            <a href=""><img src ="../assets/hinh/Mail.png" style="width: 100%; "></a></div>
+            </div>
+        </div>
+        <div>
+            <p class="tieude">Về chúng tôi</p>
+            <p>...</p>
+        </div>
+        <div>
+            <p class="tieude">Hỗ trợ khách hàng</p> <br>
+            <a href="#" style="color: rgb(255, 255, 255);" class="no-underline">Phiếu quà tặng</a><br>
+            <a href="#" style="color: rgb(255, 255, 255);" class="no-underline">Mã giảm giá</a>
+        </div>
+        <div>
+            <p class="tieude">Đăng ký thành viên</p> <br>
+            <a routerLink="/dangky"><button style="width: 150px; height: 50px;">Đăng ký</button></a>
+            <p>Đăng ký với chúng tôi để nhận email về sản phẩm mới, khuyến mãi đặc biệt và các sự kiện hấp dẫn</p>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="container2">
+          <p>&copy; {{ currentYear }} All right reserved. Shop... <img class="logo2" src ="../assets/hinh/1310558.jpg"></p>
+        </div>
+    </div>
+  </footer>
+  

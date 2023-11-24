@@ -1,0 +1,70 @@
+
+<!-- thanh-cong-cu.component.html -->
+<header>
+<div>
+        <img src="../assets/hinh/anhbia4.jpg" class="logo" alt="...">
+        <a routerLink="/trangchu" >Trang Chủ</a>
+        <a routerLink="/sanpham">Sản Phẩm</a>
+        <a routerLink="/lienhe">Liên Hệ</a>
+        <a routerLink="/giohang">Giỏ Hàng</a>
+        <button  class="btn btn-primary" style=" background-color:rgb(93, 93, 93); margin-right: 5px; margin-top: -6px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Lọc sản phẩm</button>
+        <a routerLink="/dangnhap" ><button  (click)="navigateToFormLog()" class=" login">ĐĂNG NHẬP</button></a>
+
+<div class="offcanvas offcanvas-start " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">LỌC SẢN PHẨM</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <label>Size:</label>
+      <select class="product-card">
+        <option value="All">S</option>
+        <option value="All">M</option>
+        <option value="All">X</option>
+        <option value="All">XL</option>
+      </select>
+    <br>
+      <label>Màu:</label>
+      <select class="product-card">
+        <option value="All">Đỏ</option>
+        <option value="All">Xanh</option>
+        <option value="All">Đen</option>
+        <option value="All">Trắng</option>
+      </select>
+      <br>
+      <label>Loại:</label>
+      <select  class="product-card">
+        <option value="All">T-Shirt</option>
+        <option value="All">Jacket</option>
+        <option value="All">Hoodie</option>
+        <option value="All">Shorts</option>
+        <option value="All">Trousers</option>
+
+      </select>
+      <br>
+      <label>Giới tính:</label>
+      <select  class="product-card">
+        <option value="All">Nam</option>
+        <option value="All">Nữ</option>
+      </select>
+      <br>
+      <label>Giá:</label>
+      <input type="number" [(ngModel)]="selectedPriceRange.min" placeholder="Min" class="product-card">
+      <br>
+      <input type="number" [(ngModel)]="selectedPriceRange.max" placeholder="Max" class="product-card">
+      <br>
+      <label>Giá Sale:</label>
+      <input type="checkbox" [(ngModel)]="selectedDiscount" style="margin-left: 10%;">
+      <br>
+      <button (click)="filterProducts()" class="btt">Xem</button>
+    </div>
+    
+    <div>
+      <!-- Display filtered products... -->
+    </div>
+    
+      </div>
+</div>
+</div>
+</header>

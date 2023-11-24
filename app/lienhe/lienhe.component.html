@@ -1,0 +1,49 @@
+<nav style="--bs-breadcrumb-divider: '>'; margin: 5%; text-decoration: none;" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/trangchu">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+  </ol>
+</nav>
+  <p class="nb">LIÊN HỆ</p>
+<div class="div">
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Họ tên</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="Họ tên" required>
+        <div class="valid-feedback">
+        </div>
+      </div>
+      <div class="col-md-4">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" aria-describedby="inputGroupPrepend" placeholder="example@gmail.com"  required>
+        </div>
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">Tiêu đề</label>
+        <input type="text" class="form-control" id="validationCustom03" placeholder="Tiêu đề" required>
+      </div>
+      <br>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 215px; width: 100%"></textarea>
+          <label for="floatingTextarea2">Nội dung</label>
+        </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Gửi</button>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>CHÚC MỪNG BẠN ĐÃ GỬI LIÊN HỆ THÀNH CÔNG</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
